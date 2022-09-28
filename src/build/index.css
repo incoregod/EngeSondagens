@@ -47,13 +47,21 @@ ul {
 }
 
 main {
-  margin-top: 120px;
+  padding-top: 120px;
+  transition: all 1s ease-in-out;
 }
 
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   background-color: #EEEEEE;
+  margin: 20px;
+  transition: all 1s ease-in-out;
+}
+
+.dark-theme.grid {
+  background-color: #2B2B2B;
+  transition: all 1s ease-in-out;
 }
 
 .nav-bar {
@@ -65,6 +73,7 @@ main {
   overflow: hidden;
   top: 0;
   animation: in 1000ms ease-in-out both;
+  transition: all 1s ease-in-out;
 }
 .nav-bar .nav-img {
   max-width: 100px;
@@ -76,6 +85,19 @@ main {
   padding: 0 5px;
 }
 
+.dark-theme {
+  transition: all 1s ease-in-out;
+  background-color: #3a3a3a;
+}
+.dark-theme .nav-a {
+  color: #EEEEEE;
+}
+
+.dark-theme-gray {
+  transition: all 1s ease-in-out;
+  background-color: #2B2B2B;
+}
+
 .card {
   justify-self: center;
   max-width: 300px;
@@ -85,6 +107,7 @@ main {
   padding: 15px;
   border: none;
   border-radius: 5px;
+  transition: all 1s ease-in-out;
 }
 .card img {
   border-radius: 5px;
@@ -101,12 +124,21 @@ main {
   font-size: 0.9rem;
 }
 
+.dark-theme.card {
+  background-color: #9c9da9;
+  transition: all 1s ease-in-out;
+}
+.dark-theme.card h1, .dark-theme.card p {
+  color: #2B2B2B;
+}
+
 .carousel {
   margin: 30px 10px;
   max-height: 450px;
 }
 .carousel img {
   max-height: 450px;
+  border-radius: 60% 10px 20% 10px;
 }
 
 .footer-container {
@@ -387,11 +419,12 @@ main {
   align-items: center;
   border: 1px solid black;
   box-sizing: content-box;
+  transition: all 0.5s ease-in-out;
 }
 
-nav.dark .toggler--slider {
+.dark-theme .toggler--slider {
   border-color: white;
-  background-color: #f5f5f5;
+  background-color: #fff;
 }
 
 .toggler--slider--circle {
@@ -401,27 +434,27 @@ nav.dark .toggler--slider {
   border-radius: 50%;
 }
 
-nav.dark .toggler--slider--circle {
+.dark-theme .toggler--slider--circle {
   background-color: black;
 }
 
 .toggler--light {
-  color: #2b283a;
+  color: #adacac;
 }
 
-nav.dark .toggler--light {
+.dark-theme .toggler--light {
   color: #918e9b;
 }
 
 .toggler--dark {
-  color: #d5d4d8;
+  color: #060606;
 }
 
-nav.dark .toggler-dark {
+.dark-theme .toggler-dark {
   color: #ffffff;
 }
 
-nav.dark .toggler--slider {
+.dark-theme .toggler--slider {
   justify-content: flex-end;
 }
 

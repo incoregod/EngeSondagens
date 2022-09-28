@@ -1,9 +1,14 @@
-import React from "react";
+import { useContext } from "react";
+import {useState} from "react";
 import { Link } from "react-router-dom";
+import {ThemeContext} from "../ThemeContext"
 
 function NavBar() {
+
+  const {theme, toggleTheme} = useContext(ThemeContext)
+
   return (
-    <nav className="nav-bar">
+    <nav className={`${theme}-theme nav-bar`}>
       <div className="app-container flex">
         <img className="nav-img" src="/assets/logo.png"></img>
         <div>
@@ -14,7 +19,7 @@ function NavBar() {
         </div>
         <div className="toggler">
           <p className="toggler--light">Light</p>
-          <div className="toggler--slider" onClick={console.log("ola")}>
+          <div className="toggler--slider" onClick={toggleTheme}>
             <div className="toggler--slider--circle"></div>
           </div>
           <p className="toggler--dark">Dark</p>
